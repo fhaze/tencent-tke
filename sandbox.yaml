@@ -1,57 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: C:\Users\fhaze\bin\kompose.exe convert
-    kompose.version: 1.21.0 (992df58d8)
-  creationTimestamp: null
   labels:
-    io.kompose.service: sandbox
-  name: sandbox
+    app: sandbox
+    version: v1
+  name: sandbox-v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: sandbox
-  strategy: {}
+      app: sandbox
+      version: v1
   template:
     metadata:
-      annotations:
-        kompose.cmd: C:\Users\fhaze\bin\kompose.exe convert
-        kompose.version: 1.21.0 (992df58d8)
-      creationTimestamp: null
       labels:
-        io.kompose.service: sandbox
+        app: sandbox
+        version: v1
     spec:
       containers:
       - image: fhaze/sandbox:1.0
-        imagePullPolicy: ""
         name: sandbox
         ports:
         - containerPort: 8080
-        resources: {}
-      restartPolicy: Always
       serviceAccountName: ""
-      volumes: null
-status: {}
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kompose.cmd: C:\Users\fhaze\bin\kompose.exe convert
-    kompose.version: 1.21.0 (992df58d8)
-  creationTimestamp: null
   labels:
-    io.kompose.service: sandbox
+    app: sandbox
+    service: sandbox
   name: sandbox
 spec:
   ports:
-  - name: "8080"
+  - name: http
     port: 8080
-    targetPort: 8080
   selector:
-    io.kompose.service: sandbox
-  type: LoadBalancer
-status:
-  loadBalancer: {}
+    app: sandbox
