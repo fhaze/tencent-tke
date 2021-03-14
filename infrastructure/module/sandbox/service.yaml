@@ -18,7 +18,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: fhaze/sandbox:1.1
+      - image: fhaze/sandbox:1.0
         name: sandbox
         ports:
         - containerPort: 8080
