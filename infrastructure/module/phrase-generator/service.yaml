@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: phrase-generator
+    version: v1
+  name: phrase-generator-v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phrase-generator
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: phrase-generator
+        version: v1
+    spec:
+      containers:
+      - image: fhaze/phrase-generator:1.0
+        name: phrase-generator
+        ports:
+        - containerPort: 9090
+      serviceAccountName: ""
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: phrase-generator
+    service: phrase-generator
+  name: phrase-generator
+spec:
+  ports:
+  - name: http
+    port: 9090
+  selector:
+    app: phrase-generator
