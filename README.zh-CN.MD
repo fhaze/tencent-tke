@@ -11,7 +11,7 @@
 
 [![#](assets/diagram.png)](assets/diagram.png)
 
-##🔌要求
+## 🔌要求
 **Go语言**是构建和运行项目模块所必需的，**Terraform**仅用于提供
 我们需要的云结构。
 
@@ -21,12 +21,12 @@
 - Terraform 0.14+
 - [Istioctl](https://istio.io/latest/docs/setup/getting-started/)
 
-##🔰入门
+## 🔰入门
 
 您需要做的第一件事是为本地环境准备好我上面描述的依赖项。然后
 您需要准备好一个腾讯云帐户并创建一个API密钥。掌握这些内容之后，请关注下一个主题即可。
 
-##⚙️让我们包装这些API密钥
+## ⚙️让我们包装这些API密钥
 
 只需导出这些文件或在您的bash_profile，Windows环境或其他环境中进行设置即可。
 
@@ -40,7 +40,7 @@ EXPORT TENCENTCLOUD_SECRET_KEY=your_secret_key
 
 >📢嘿！**na-ashburn**基本上是腾讯云的弗吉尼亚州地区
 
-##🧱提供TKE集群环境
+## 🧱提供TKE集群环境
 
 首先，检查`infrastructure/tencentcloud`中的**Terraform**文件，以提供该项目的“ TKE集群”。
 您可以根据需要自定义集群，但是请放心，因为我们将提供非常小的计算机，
@@ -82,7 +82,7 @@ terraform apply
 
 >📢嘿！腾讯云最多需要3分钟来创建一个TKE集群。是时候喝杯咖啡了☕
 
-##🛠️配置Kubectl上下文
+## 🛠️配置Kubectl上下文
 
 **TKE集群**现在正在运行，因此请访问https://console.cloud.tencent.com/tke2/cluster并了解如何配置您的
 “基本信息”页面中的kubectl上下文，因此您可以开始使用我们创建的集群。
@@ -95,7 +95,7 @@ kubectl get all
 
 如果它返回`service / kubernetes`和一些其他信息，则设置成功。
 
-##🕸️部署Istio服务网格
+## 🕸️部署Istio服务网格
 
 我们正在为该项目使用**Istio**服务网格，因此通过使用`istioctl`，我们可以非常轻松地安装和配置* Istio *。
 
@@ -118,7 +118,7 @@ kubectl get service/istio-ingressgateway -n istio-system
 `service/istio-ingressgateway`中的EXTERNAL-IP是您的负载均衡器外部ip，它是将发布您的内容的IP。
 由于尚未部署“虚拟服务”，因此目前尚未发布任何内容。
 
-##🚀部署服务
+## 🚀部署服务
 
 部署服务是一个简单的任务，我们只需要构建，发布和应用服务清单，就可以了。
 有两种方法可以执行此操作，您可以使用Docker Hub **中已构建的映像，也可以自行构建映像，然后
@@ -154,7 +154,7 @@ kubectl apply -f infrastructure/module/phrase-generator
 >您需要在`infrastructure/modules/*`中更新这些文件以指向您的** Docker Hub **，否则您将
 >使用我的图像。
 
-##🌐部署网关和虚拟服务
+## 🌐部署网关和虚拟服务
 
 最后，我们需要部署**Gateway**和**Virtual Service**，在这里我们为每个服务及其映射设置映射
 网址，因为我们只是公开`sandbox`模块，而`phrase-generator`只是内部的，所以不包含在其中。
@@ -163,7 +163,7 @@ kubectl apply -f infrastructure/module/phrase-generator
 kubectl apply -f基础架构/模块/网络
 ```
 
-##🏁完成！让我们检查一下是否正常
+## 🏁完成！让我们检查一下是否正常
 
 如果尚未执行以下操作，请检查您的外部IP：
 
@@ -179,7 +179,7 @@ curl EXTERNAL-IP/phrase -v
 
 如果您的响应是http状态200，并且是` Hello World!`，`こんにちは世界！`，`世界你好！`，`Olá Mundo!`之一，那么您已设置好。
 
-##🔍监控内容
+## 🔍监控内容
 
 Istio包括Kiali，Prometheus，Grafana和Jaeger插件，您可以通过执行以下命令进行安装：
 
@@ -203,7 +203,7 @@ istioctl dashboard kiali
 istioctl dashboard grafana
 ```
 
-##🗑️清理基础架构
+## 🗑️清理基础架构
 
 不用担心您的钱包💰，因为我们正在使用“ Terraform”清理此基础架构非常简单，只需执行以下命令：
 
