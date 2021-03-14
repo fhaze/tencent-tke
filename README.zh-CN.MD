@@ -97,7 +97,7 @@ kubectl get all
 
 ## 🕸️部署Istio服务网格
 
-我们正在为该项目使用**Istio**服务网格，因此通过使用`istioctl`，我们可以非常轻松地安装和配置* Istio *。
+我们正在为该项目使用**Istio**服务网格，因此通过使用`istioctl`，我们可以非常轻松地安装和配置**Istio**。
 
 ```shell
 istioctl install --set profile=demo -y
@@ -121,7 +121,7 @@ kubectl get service/istio-ingressgateway -n istio-system
 ## 🚀部署服务
 
 部署服务是一个简单的任务，我们只需要构建，发布和应用服务清单，就可以了。
-有两种方法可以执行此操作，您可以使用Docker Hub **中已构建的映像，也可以自行构建映像，然后
+有两种方法可以执行此操作，您可以使用Docker Hub**中已构建的映像，也可以自行构建映像，然后
 发布它们。
 
 如果您的终端位于`infrastructure/tencentcloud`文件夹中，请返回项目的根文件夹：
