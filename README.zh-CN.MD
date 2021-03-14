@@ -150,8 +150,8 @@ kubectl apply -f infrastructure/module/sandbox
 kubectl apply -f infrastructure/module/phrase-generator
 ```
 
->📢嘿！**因为Kubernetes清单文件正在使用我的** Docker Hub **，所以如果您选择自己构建它们的话
->您需要在`infrastructure/modules/*`中更新这些文件以指向您的** Docker Hub **，否则您将
+>📢嘿！因为Kubernetes清单文件正在使用我的**Docker Hub**，所以如果您选择自己构建它们的话
+>您需要在`infrastructure/modules/*`中更新这些文件以指向您的**Docker Hub**，否则您将
 >使用我的图像。
 
 ## 🌐部署网关和虚拟服务
