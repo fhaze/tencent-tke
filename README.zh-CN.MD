@@ -2,7 +2,7 @@
 
 谷歌翻译 (Google Translated)
 
-#腾讯云TKE🍱沙盒
+# 腾讯云TKE🍱沙盒
 
 [![#](https://img.shields.io/badge/Go-1.16-blue.svg)]()
 [![#](https://img.shields.io/badge/Terraform-0.14.8-blueviolet.svg)]()
