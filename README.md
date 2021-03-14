@@ -5,7 +5,7 @@
 
 My Sandbox repository for Tencent Cloud Kubernetes stuff
 
-[![#](assets/diagram.png)]()
+[![assets/diagram.png](assets/diagram.png)]()
 
 ## 🔌 Requirements
 The **Go language** is required for building and running the project modules, the **Terraform** is only about providing
