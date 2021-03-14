@@ -1,6 +1,10 @@
 version: '3'
 services:
   sandbox:
-    build: .
+    build: module/sandbox
     ports:
       - 8080:8080
+  phrase-generator:
+    build: module/phrase-generator
+    ports:
+      - 9090:9090
