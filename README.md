@@ -1,3 +1,5 @@
+English | [中文](README.zh-CN.MD)
+
 # Tencent Cloud TKE - 🍱 Sandbox
 
 [![#](https://img.shields.io/badge/Go-1.16-blue.svg)]()
