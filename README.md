@@ -1,4 +1,4 @@
-English | [中文](README.zh-CN.MD)
+English | [简体中文](README.zh-CN.MD)
 
 # Tencent Cloud TKE with Istio Service Mesh
 
