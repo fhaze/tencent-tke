@@ -115,7 +115,7 @@ kubectl get service/istio-ingressgateway -n istio-system
 ```
 
 `service/istio-ingressgateway` 中的**EXTERNAL-IP**是您的负载均衡器外部ip，它是将发布您的内容的IP。
-由于尚未部署**虚拟服务**，因此目前尚未发布任何内容。
+由于没有部署**虚拟服务**，因此目前尚未发布任何内容。
 
 ## 🚀部署服务
 
