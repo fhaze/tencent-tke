@@ -9,7 +9,7 @@
 
 我的沙盒存储库，用于腾讯云Kubernetes的东西
 
-[![#](assets/diagram.png)](assets/diagram.png)
+[![#](assets/diagram.png)](assets/diagram.zn-CN.png)
 
 ## 🔌要求
 **Go语言**是构建和运行项目模块所必需的，**Terraform**仅用于提供
