@@ -1,13 +1,13 @@
-[English](README.md) | 中文
+[English](README.md) | 简体中文
 
 谷歌翻译 (Google Translated)
 
-# 腾讯云TKE🍱沙盒
+# 带有Istio Service Mesh的腾讯云TKE
 
 [![#](https://img.shields.io/badge/Go-1.16-blue.svg)]()
 [![#](https://img.shields.io/badge/Terraform-0.14.8-blueviolet.svg)]()
 
-我的沙盒存储库，用于腾讯云Kubernetes的东西
+将腾讯云Kubernetes与Istio Service Mesh结合使用。
 
 [![#](assets/diagram.png)](assets/diagram.zn-CN.png)
 
@@ -84,7 +84,7 @@ terraform apply
 
 ## 🛠️配置Kubectl上下文
 
-**TKE集群**现在正在运行，因此请访问https://console.cloud.tencent.com/tke2/cluster并了解如何配置您的
+**TKE集群**现在正在运行，因此请访问 https://console.cloud.tencent.com/tke2/cluster 并了解如何配置您的
 “基本信息”页面中的kubectl上下文，因此您可以开始使用我们创建的集群。
 
 您可以通过执行以下命令检查配置：
