@@ -2,12 +2,12 @@
 
 谷歌翻译 (Google Translated)
 
-# 将腾讯云Kubernetes与Istio Service Mesh结合使用。
+# 带有Istio Service Mesh的腾讯云TKE
 
 [![#](https://img.shields.io/badge/Go-1.16-blue.svg)]()
 [![#](https://img.shields.io/badge/Terraform-0.14.8-blueviolet.svg)]()
 
-我的沙盒存储库，用于腾讯云Kubernetes的东西
+将腾讯云Kubernetes与Istio Service Mesh结合使用。
 
 [![#](assets/diagram.png)](assets/diagram.png)
 
