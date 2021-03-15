@@ -205,7 +205,7 @@ istioctl dashboard grafana
 
 ## 🗑️清理基础架构
 
-不用担心您的钱包💰，因为我们正在使用“ Terraform”清理此基础架构非常简单，只需执行以下命令：
+不用担心您的钱包💰，因为我们正在使用**Terraform**清理此基础架构非常简单，只需执行以下命令：
 
 ```shell
 cd infrastructure/tencentcloud
