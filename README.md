@@ -7,7 +7,7 @@ English | [简体中文](README.zh-CN.MD)
 
 Using Tencent Cloud Kubernetes with Istio Service Mesh.
 
-[![#](assets/diagram.png)](assets/diagram.png)
+[![#](assets/infra.png)](assets/infra.png)
 
 ## 🔌 Requirements
 The **Go language** is required for building and running the project modules, the **Terraform** is only about providing

@@ -9,7 +9,7 @@
 
 将腾讯云Kubernetes与Istio Service Mesh结合使用。
 
-[![#](assets/diagram.png)](assets/diagram.zn-CN.png)
+[![#](assets/infra.png)](assets/infra.zn-CN.png)
 
 ## 🔌要求
 **Go语言**是构建和运行项目模块所必需的，**Terraform**仅用于提供
