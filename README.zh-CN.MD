@@ -12,8 +12,7 @@
 [![#](assets/diagram.zn-CN.png)](assets/diagram.zn-CN.png)
 
 ## 🔌要求
-**Go语言**是构建和运行项目模块所必需的，**Terraform**仅用于提供
-我们需要的云结构。
+**Go语言**是构建和运行项目模块所必需的，**Terraform**是用于提供我们所需的云结构的。
 
 - Docker
 - Docker-Compose (with support to version 3 yml files)
