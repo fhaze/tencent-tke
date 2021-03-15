@@ -77,7 +77,7 @@ terraform plan
 terraform apply
 ```
 
-**Terraform**会再次向您显示计划，并要求您输入“是”进行确认，因此只需确认并让
+**Terraform**会再次向您显示计划，并要求您输入`yes`进行确认，因此只需确认并让
 **Terraform**为我们提供了云结构。当**Terraform**为您返回终端时，您就设置好了！
 
 >📢嘿！腾讯云最多需要3分钟来创建一个TKE集群。是时候喝杯咖啡了☕
@@ -85,7 +85,7 @@ terraform apply
 ## 🛠️配置Kubectl上下文
 
 **TKE集群**现在正在运行，因此请访问 https://console.cloud.tencent.com/tke2/cluster 并了解如何配置您的
-“基本信息”页面中的kubectl上下文，因此您可以开始使用我们创建的集群。
+**基本信息**页面中的kubectl上下文，因此您可以开始使用我们创建的集群。
 
 您可以通过执行以下命令检查配置：
 
@@ -115,13 +115,13 @@ kubectl label namespace default istio-injection=enabled
 kubectl get service/istio-ingressgateway -n istio-system
 ```
 
-`service/istio-ingressgateway` 中的EXTERNAL-IP是您的负载均衡器外部ip，它是将发布您的内容的IP。
-由于尚未部署“虚拟服务”，因此目前尚未发布任何内容。
+`service/istio-ingressgateway` 中的**EXTERNAL-IP**是您的负载均衡器外部ip，它是将发布您的内容的IP。
+由于尚未部署**虚拟服务**，因此目前尚未发布任何内容。
 
 ## 🚀部署服务
 
 部署服务是一个简单的任务，我们只需要构建，发布和应用服务清单，就可以了。
-有两种方法可以执行此操作，您可以使用Docker Hub**中已构建的映像，也可以自行构建映像，然后
+有两种方法可以执行此操作，您可以使用**Docker Hub**中已构建的映像，也可以自行构建映像，然后
 发布它们。
 
 如果您的终端位于 `infrastructure/tencentcloud` 文件夹中，请返回项目的根文件夹：
