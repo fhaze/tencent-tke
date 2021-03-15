@@ -1,6 +1,6 @@
 English | [中文](README.zh-CN.MD)
 
-# Tencent Cloud TKE - with Istio Service Mesh
+# Tencent Cloud TKE with Istio Service Mesh
 
 [![#](https://img.shields.io/badge/Go-1.16-blue.svg)]()
 [![#](https://img.shields.io/badge/Terraform-0.14.8-blueviolet.svg)]()
