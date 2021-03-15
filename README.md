@@ -114,7 +114,7 @@ kubectl get service/istio-ingressgateway -n istio-system
 ```
 
 The `EXTERNAL-IP` from the `service/istio-ingressgateway` is your Load Balancer external ip, and the one that will publish your stuff.  
-Because there is not **Virtual Service** deployed, nothing will be published there yet.
+Because there is not **Virtual Service** deployed, nothing is being published there yet.
 
 ## 🚀 Deploying the Services
 
