@@ -42,11 +42,11 @@ EXPORT TENCENTCLOUD_SECRET_KEY=your_secret_key
 
 ## 🧱提供TKE集群环境
 
-首先，检查`infrastructure/tencentcloud`中的**Terraform**文件，以提供该项目的“ TKE集群”。
+首先，检查 `infrastructure/tencentcloud` 中的**Terraform**文件，以提供该项目的“ TKE集群”。
 您可以根据需要自定义集群，但是请放心，因为我们将提供非常小的计算机，
 因此这些不会吞噬您的钱包。
 
-让我们开始为该项目初始化terraform：
+让我们开始为该项目初始化**Terraform**：
 
 ```shell
 cd infrastructure/tencentcloud
@@ -68,8 +68,8 @@ terraform plan
 - VPC子网（10.0.0.0/24）
 - TKE集群
 
->📢 嘿！群集将向世界开放'0.0.0.0/0'，如果您担心的话可以更改该配置
->通过更改“ infrastructure / tencencloud / variables.tf”中的“ managed_cluster_internet_security_policies”变量。
+>📢 嘿！群集将向世界开放 `0.0.0.0/0`，如果您担心的话可以更改该配置
+>通过更改 `infrastructure/tencencloud/variables.tf` 中的 `managed_cluster_internet_security_policies`变量。
 
 好的，现在让我们通过执行以下方案来应用此计划：
 
@@ -93,11 +93,11 @@ terraform apply
 kubectl get all
 ```
 
-如果它返回`service / kubernetes`和一些其他信息，则设置成功。
+如果它返回 `service/kubernetes` 和一些其他信息，则设置成功。
 
 ## 🕸️部署Istio服务网格
 
-我们正在为该项目使用**Istio**服务网格，因此通过使用`istioctl`，我们可以非常轻松地安装和配置**Istio**。
+我们正在为该项目使用**Istio**服务网格，因此通过使用 `istioctl`，我们可以非常轻松地安装和配置**Istio**。
 
 ```shell
 istioctl install --set profile=demo -y
@@ -115,7 +115,7 @@ kubectl label namespace default istio-injection=enabled
 kubectl get service/istio-ingressgateway -n istio-system
 ```
 
-`service/istio-ingressgateway`中的EXTERNAL-IP是您的负载均衡器外部ip，它是将发布您的内容的IP。
+`service/istio-ingressgateway` 中的EXTERNAL-IP是您的负载均衡器外部ip，它是将发布您的内容的IP。
 由于尚未部署“虚拟服务”，因此目前尚未发布任何内容。
 
 ## 🚀部署服务
@@ -124,7 +124,7 @@ kubectl get service/istio-ingressgateway -n istio-system
 有两种方法可以执行此操作，您可以使用Docker Hub**中已构建的映像，也可以自行构建映像，然后
 发布它们。
 
-如果您的终端位于`infrastructure/tencentcloud`文件夹中，请返回项目的根文件夹：
+如果您的终端位于 `infrastructure/tencentcloud` 文件夹中，请返回项目的根文件夹：
 
 ```shell
 cd -
@@ -151,13 +151,13 @@ kubectl apply -f infrastructure/module/phrase-generator
 ```
 
 >📢嘿！因为Kubernetes清单文件正在使用我的**Docker Hub**，所以如果您选择自己构建它们的话
->您需要在`infrastructure/modules/*`中更新这些文件以指向您的**Docker Hub**，否则您将
+>您需要在 `infrastructure/modules/*` 中更新这些文件以指向您的**Docker Hub**，否则您将
 >使用我的图像。
 
 ## 🌐部署网关和虚拟服务
 
 最后，我们需要部署**Gateway**和**Virtual Service**，在这里我们为每个服务及其映射设置映射
-网址，因为我们只是公开`sandbox`模块，而`phrase-generator`只是内部的，所以不包含在其中。
+网址，因为我们只是公开 `sandbox` 模块，而 `phrase-generator` 只是内部的，所以不包含在其中。
 
 ```shell
 kubectl apply -f基础架构/模块/网络
@@ -177,7 +177,7 @@ kubectl获取服务/ istio-ingressgateway -n istio-system
 curl EXTERNAL-IP/phrase -v
 ```
 
-如果您的响应是http状态200，并且是` Hello World!`，`こんにちは世界！`，`世界你好！`，`Olá Mundo!`之一，那么您已设置好。
+如果您的响应是http状态200，并且是 ` Hello World!`，`こんにちは世界！`，`世界你好！`，`Olá Mundo! `之一，那么您已设置好。
 
 ## 🔍监控内容
 
