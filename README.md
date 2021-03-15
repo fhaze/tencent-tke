@@ -10,7 +10,7 @@ Using Tencent Cloud Kubernetes with Istio Service Mesh.
 [![#](assets/diagram.png)](assets/diagram.png)
 
 ## 🔌 Requirements
-The **Go language** is required for building and running the project modules, the **Terraform** is only about providing
+The **Go language** is required for building and running the project modules, the **Terraform** is for providing
 the cloud structure we need.
 
 - Docker
