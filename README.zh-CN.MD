@@ -42,7 +42,7 @@ EXPORT TENCENTCLOUD_SECRET_KEY=your_secret_key
 
 ## 🧱提供TKE集群环境
 
-首先，检查 `infrastructure/tencentcloud` 中的**Terraform**文件，以提供该项目的“ TKE集群”。
+首先，检查 `infrastructure/tencentcloud` 中的**Terraform**文件，以提供该项目的**TKE集群**。
 您可以根据需要自定义集群，但是请放心，因为我们将提供非常小的计算机，
 因此这些不会吞噬您的钱包。
 
