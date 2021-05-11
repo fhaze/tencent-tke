@@ -29,9 +29,9 @@ You need to have a Tencent Cloud account ready and create an API Key. Having tha
 Just export these or set them in you bash_profile, Windows environment or whatever.
 
 ```shell
-EXPORT TENCENTCLOUD_REGION=na-ashburn
-EXPORT TENCENTCLOUD_SECRET_ID=your_secret_id
-EXPORT TENCENTCLOUD_SECRET_KEY=your_secret_key
+export TENCENTCLOUD_REGION=na-ashburn
+export TENCENTCLOUD_SECRET_ID=your_secret_id
+export TENCENTCLOUD_SECRET_KEY=your_secret_key
 ```
 
 Depending on the way you set those, make sure to restart your terminal so changes can take effect. 
