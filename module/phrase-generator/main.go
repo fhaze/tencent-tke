@@ -7,7 +7,10 @@ import (
 )
 
 var phrases []string = []string{
-	"Teste de V2\n",
+	"Hello World!",
+	"こんにちは世界！",
+	"世界你好！",
+	"Olá Mundo!",
 }
 
 func main() {
