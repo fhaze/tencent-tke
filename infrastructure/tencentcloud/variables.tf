@@ -15,7 +15,7 @@ variable "cluster_cidr" {
 }
 
 variable "default_instance_type" {
-  default = "S5.SMALL2"
+  default = "S3.SMALL2"
 }
 
 variable "cluster_max_pod_num"{

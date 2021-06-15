@@ -16,7 +16,7 @@ func main() {
 }
 
 func hello(c echo.Context) error {
-	return c.String(http.StatusOK, "Sandbox V1")
+	return c.String(http.StatusOK, "Sandbox V1\n")
 }
 
 func phrase(c echo.Context) error {

@@ -18,7 +18,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: fhaze/phrase-generator:1.0
+      - image: fhaze/phrase-generator:1.1
         name: phrase-generator
         ports:
         - containerPort: 9090
