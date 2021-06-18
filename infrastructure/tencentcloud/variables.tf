@@ -1,9 +1,30 @@
+variable "region" {
+  default = "na-ashburn"
+}
+
 variable "hostname" {
   default = "tke-sandbox"
 }
 
 variable "availability_zone" {
   default = "na-ashburn-2"
+}
+
+
+variable "vpc_tke_name" {
+  default = "vpc-main"
+}
+
+variable "vpc_tke_cidr_block" {
+  default = "10.0.0.0/16"
+}
+
+variable "subnet_tke_name" {
+  default = "vpc-subnet-main"
+}
+
+variable "subnet_tke_cidr_block" {
+  default = "10.0.0.0/24"
 }
 
 variable "cluster_version" {

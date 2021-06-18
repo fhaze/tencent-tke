@@ -8,18 +8,18 @@ terraform {
 }
 
 provider "tencentcloud" {
-  region = "na-ashburn"
+  region = var.region
 }
 
 resource "tencentcloud_vpc" "vpc_main" {
-  name = "vpc-main"
-  cidr_block = "10.0.0.0/16"
+  name = var.vpc_tke_name
+  cidr_block = var.vpc_tke_cidr_block
 }
 
 resource "tencentcloud_subnet" "vpc_main_tke_subnet" {
   availability_zone = var.availability_zone
-  cidr_block = "10.0.0.0/24"
-  name = "vpc-main-tke"
+  cidr_block = var.subnet_tke_cidr_block
+  name = var.subnet_tke_name
   vpc_id = tencentcloud_vpc.vpc_main.id
 }
 
